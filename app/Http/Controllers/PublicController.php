@@ -82,6 +82,8 @@ class PublicController extends Controller
         Subscripe::create($data);
         return redirect()->back();
         //creating command to send emails for active subscripers
+        //php artisan make:command NewsLetterCommand
+        //php artisan schedule:run
     }
 
 

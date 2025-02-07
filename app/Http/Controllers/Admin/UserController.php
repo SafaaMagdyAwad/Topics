@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -40,8 +40,8 @@ class UserController extends Controller
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
         ]);
-        $data['password'] = Hash::make($data['password']);
-        $data['is_active']=1; 
+        // $data['password'] = Hash::make($data['password']);
+        $data['is_active']=1;
         $data['email_verified_at'] = Carbon::now()->format('Y-m-d H:i:s');
         // dd( $data);
         User::create($data);
@@ -69,7 +69,7 @@ class UserController extends Controller
             'password' => 'nullable|string|min:8',
         ]);
         $data['is_active'] = $request->is_active;
-        $data['password'] =isset($request->password)? Hash::make($request->password):$user->password;
+        $data['password'] =isset($request->password)? ($request->password):$user->password;
         // dd($user->password);
         $user->update($data);
         return redirect()->route('user.index');
