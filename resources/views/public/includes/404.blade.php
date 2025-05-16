@@ -3,7 +3,8 @@
         <div class="row">
 
             <div class="col-lg-8 col-12 mx-auto">
-                <h1 class="text-white text-center"><i class="bi bi-exclamation-triangle" style="font-size: 150px;"></i></h1>
+                <h1 class="text-white text-center"><i class="bi bi-exclamation-triangle" style="font-size: 150px;"></i>
+                </h1>
                 <h6 class="text-center">404| page not found</h6>
             </div>
             <div class="col-12 text-center">

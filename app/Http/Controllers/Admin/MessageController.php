@@ -16,14 +16,16 @@ class MessageController extends Controller
         return view('admin.message.index',compact('messages'));
     }
     public function read(Message $message){
-        $message->update([
-            'isread'=> 1,
-        ]);
+        if($message->isread==0){
+            $message->update([
+                'isread'=> 1,
+            ]);
+        }
         return view('admin.message.details',compact('message'));
     }
     public function destroy(Message $message){
         $message->delete();
-        return redirect()->route('message.index');
+        return redirect()->back()->with('success',"This Message Was Deleted Successfully !");
     }
 
 }

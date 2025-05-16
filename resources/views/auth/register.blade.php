@@ -79,7 +79,7 @@
 						<input type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required>
 						<img src="{{ asset('assets/admin/images/password-svgrepo-com.svg') }}" alt="" class="input-group-text">
 					</div>
-					<button class="btn btn-dark px-5 mb-2">
+					<button type="submit" class="btn btn-dark px-5 mb-2">
 						REGISTER
 						<img src="{{ asset('assets/admin/images/arrow-sm-right-svgrepo-com.svg') }}" alt="">
 					</button>

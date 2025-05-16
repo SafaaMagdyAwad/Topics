@@ -5,7 +5,7 @@
             <div class="col-lg-8 col-12 m-auto">
                 <h3 class="mb-4">{{ $topic->title }}</h3>
 
-                <p>{{  $topic->content  }}</p>
+                <p>{{ $topic->content }}</p>
             </div>
 
         </div>

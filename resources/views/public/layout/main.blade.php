@@ -3,7 +3,8 @@
 
 
 
-    @include('public.includes.head')
+@include('public.includes.head')
+
 <body id="top">
 
     <main>
@@ -22,4 +23,3 @@
 </body>
 
 </html>
-

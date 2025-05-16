@@ -16,11 +16,12 @@ class TestimonialFactory extends Factory
      */
     public function definition(): array
     {
+        $images=['testimonial1.jpg','testimonial2.jpg','testimonial3.jpg'];
         return [
             'name'=>fake()->name(),
             'content'=>fake()->text(300),
             'published'=>fake()->boolean(),
-            'image'=>fake()->randomElement(['testimonial1.jpg','testimonial2.jpg','testimonial3.jpg']),
+            'image'=>fake()->randomElement($images),
         ];
     }
 }

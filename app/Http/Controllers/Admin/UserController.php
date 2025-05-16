@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -40,10 +40,10 @@ class UserController extends Controller
             'email' => 'required|string|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
         ]);
-        $data['is_active']=1; //عشان ال admin هو اللي ضافه
-
-        $data['email_verified_at'] = Carbon::now();
-        // dd($data);
+        // $data['password'] = Hash::make($data['password']);
+        $data['is_active']=1;
+        $data['email_verified_at'] = Carbon::now()->format('Y-m-d H:i:s');
+        // dd( $data);
         User::create($data);
         return redirect()->route('user.index');
     }
@@ -69,8 +69,8 @@ class UserController extends Controller
             'password' => 'nullable|string|min:8',
         ]);
         $data['is_active'] = $request->is_active;
-        $data['password'] =isset($request->password)? Hash::make($request->password):$user->password;
-        // dd($data);
+        $data['password'] =isset($request->password)? ($request->password):$user->password;
+        // dd($user->password);
         $user->update($data);
         return redirect()->route('user.index');
     }
@@ -81,6 +81,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('user.index');
+        return redirect()->back()->with('success',"This User Was Deleted Successfully !");
     }
 }

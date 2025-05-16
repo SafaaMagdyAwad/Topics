@@ -4,7 +4,8 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link click-scroll {{ active('topicsListing') }}" href="{{ route('topicsListing') }}">Topics Listing</a>
+        <a class="nav-link click-scroll {{ active('topicsListing') }}" href="{{ route('topicsListing') }}">Topics
+            Listing</a>
     </li>
 
     <li class="nav-item">
@@ -12,7 +13,8 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link click-scroll {{ active('testimonials') }}" href="{{ route('testimonials') }}">Our Client Says</a>
+        <a class="nav-link click-scroll {{ active('testimonials') }}" href="{{ route('testimonials') }}">Our Client
+            Says</a>
     </li>
 
 

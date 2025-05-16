@@ -10,16 +10,26 @@
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
 
             @stack('Links')
 
             <div class="d-none d-lg-block">
-                <a href="{{ route('register')  }}" class="navbar-icon bi-person smoothscroll"></a>
+                @if (Route::has('login'))
+                    <nav class="-mx-3 flex flex-1 justify-end">
+                        @auth
+                            <a href="{{ route('topic.index') }}" class="navbar-icon bi-person smoothscroll"></a>
+                        @else
+                            <a href="{{ route('register') }}" class="navbar-icon bi-person smoothscroll"></a>
+                        @endauth
+
+
+                    </nav>
+                @endif
             </div>
         </div>
     </div>

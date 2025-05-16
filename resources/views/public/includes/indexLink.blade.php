@@ -24,7 +24,8 @@
     </li>
     <li class="border"></li>
     <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle inactive show" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">Pages</a>
+        <a class="nav-link dropdown-toggle inactive show" href="#" id="navbarLightDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="true">Pages</a>
 
         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
             <li><a class="dropdown-item " href="{{ route('contact') }}">Contact Us</a></li>

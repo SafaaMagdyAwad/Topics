@@ -16,10 +16,11 @@ class MessageFactory extends Factory
      */
     public function definition(): array
     {
+        $subject = ['Technology', 'Health', 'Business', 'Education', 'Sports'];
         return [
             'name'=>fake()->name(),
-            'email'=>fake()->email(),
-            'subject'=>fake()->word(),
+            'email'=>fake()->safeEmail(),
+            'subject'=>fake()->randomElement($subject),
             'message'=>fake()->text(600),
             'isread'=>fake()->boolean(),
         ];

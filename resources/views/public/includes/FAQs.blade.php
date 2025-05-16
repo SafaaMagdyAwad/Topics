@@ -24,8 +24,8 @@
                             </button>
                         </h2>
 
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to
                                     redistribute this template</strong> on any other template collection website
@@ -54,14 +54,13 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false"
-                                aria-controls="collapseThree">
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Does it need to paid?
                             </button>
                         </h2>
 
-                        <div id="collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 You can modify any of this with custom CSS or overriding our default variables.
                                 It's also worth noting that just about any HTML can go within the

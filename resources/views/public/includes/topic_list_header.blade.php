@@ -14,12 +14,13 @@
                 <h2 class="text-white">Introduction to <br> Web Design 101</h2>
 
                 <div class="d-flex align-items-center mt-5">
-                    <a href="{{ route('topicsDetail',$topic) }}" class="btn custom-btn custom-border-btn smoothscroll me-4">Read More</a>
+                    <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Read More</a>
 
-                    <form method="POST" action="{{ route('readTopic',$topic) }}">
+                    <form method="POST" action="{{ route('readTopic', $topic) }}">
                         @csrf
                         @method('put')
-                        <button style="background-color: transparent; border: none; color: inherit;" type="submit" class="custom-icon bi-bookmark smoothscroll">
+                        <button style="background-color: transparent; border: none; color: inherit;" type="submit"
+                            class="custom-icon bi-bookmark smoothscroll">
                         </button>
                     </form>
                 </div>
@@ -27,7 +28,8 @@
 
             <div class="col-lg-5 col-12">
                 <div class="topics-detail-block bg-white shadow-lg">
-                    <img src="{{ asset('assets/admin/images/topics/'.$topic->image) }}" class="topics-detail-block-image img-fluid">
+                    <img src="{{ asset('assets/admin/images/topics/' . $topic->image) }}"
+                        class="topics-detail-block-image img-fluid">
                 </div>
             </div>
 

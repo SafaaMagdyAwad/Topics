@@ -8,7 +8,10 @@
             </div>
 
             <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6818.68494839463!2d31.385601390232498!3d31.29427821521099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f76f50fdd79a37%3A0x7ee17d5eaf475af0!2z2KzZhdmK2KfZhtip!5e0!3m2!1sen!2seg!4v1725384091783!5m2!1sen!2seg" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6818.68494839463!2d31.385601390232498!3d31.29427821521099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f76f50fdd79a37%3A0x7ee17d5eaf475af0!2z2KzZhdmK2KfZhtip!5e0!3m2!1sen!2seg!4v1725384091783!5m2!1sen!2seg"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">

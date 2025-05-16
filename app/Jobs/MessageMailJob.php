@@ -28,6 +28,7 @@ class MessageMailJob implements ShouldQueue
      */
     public function handle(): void
     {
+
         Mail::to('admin.site@gmail.com')->send(new MessageMail($this->data));
         
     }

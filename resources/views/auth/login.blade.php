@@ -48,7 +48,7 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @enderror
-					<button class="btn btn-dark px-5 mb-2">
+					<button class="btn btn-dark px-5 mb-2" type="submit">
 						LOGIN
 						<img src="{{ asset('assets/admin/images/arrow-sm-right-svgrepo-com.svg') }}" alt="">
 					</button>

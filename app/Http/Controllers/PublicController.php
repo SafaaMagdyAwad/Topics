@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\MessageMailJob;
-use App\Jobs\NewsLetterJob;
 use App\Models\Category;
 use App\Models\Message;
+use App\Models\Subscripe;
 use App\Models\Testimonial;
 use App\Models\Topic;
 use Illuminate\Http\Request;
+
 
 class PublicController extends Controller
 {
@@ -25,7 +26,7 @@ class PublicController extends Controller
         return view('public.testimonials',compact('testimonials'));
     }
     public function topicslisting(){
-        $popular=Topic::with('category')->where('published',1)->orderBy('views', 'desc')->paginate(3);
+        $popular=Topic::with('category')->where('published',1)->orderBy('views', 'desc')->simplePaginate(3);
         $trending=Topic::with('category')->where('published',1)->where('trending',1)->latest()->take(2)->get();
         // dd($trending);
         return view('public.topics-listing',compact('popular','trending'));
@@ -43,7 +44,7 @@ class PublicController extends Controller
         $data = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'subject' => 'nullable|string',
+            'subject' => 'required|string',
             'message' => 'required|string',
         ]);
         $data['isread']=0;
@@ -52,7 +53,7 @@ class PublicController extends Controller
         //send email in job
         // php artisan queue:work
         MessageMailJob::dispatch($data);
-        return redirect()->back();
+        return redirect()->back()->with('success',"Your Message was sent successfully !");
     }
     public function search(Request $request)
     {
@@ -72,6 +73,17 @@ class PublicController extends Controller
             'views'=> $topic->views+1,
         ]);
         return redirect()->back();
+    }
+    public function newsletter(Request $request){
+        $data=$request->validate([
+            'email'=>'required|email|unique:subscripes,email',
+        ]);
+        $data['active']=1;
+        Subscripe::create($data);
+        return redirect()->back();
+        //creating command to send emails for active subscripers
+        //php artisan make:command NewsLetterCommand
+        //php artisan schedule:run
     }
 
 
